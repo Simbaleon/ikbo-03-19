@@ -8,8 +8,7 @@ public class Tests {
         int pr = in.nextInt();
         while (pr != 0)
         {
-            switch (pr)
-            {
+            switch (pr)            {
                 case 1:
                     test1();
                     break;
