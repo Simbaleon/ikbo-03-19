@@ -1,45 +1,65 @@
 package Prac6;
 
-class Student implements Comparable<Student>{
-    private int ID;
+public class Student {
+    private int id;
+    private int gpa;
     private String name;
-    private int grade;
+    private String group;
 
-    @Override
-    public int compareTo(Student o) {
-        return Integer.compare(this.grade, o.getGrade());
+    public Student() {
     }
 
-    Student(int ID, String name) {
-        this.ID = ID;
+    public Student(int id, int math, int rus, int inf, String name, String group) {
+        this.id = id;
+        this.gpa = math + rus + inf;
         this.name = name;
-        grade = 0;
+        this.group = group;
     }
 
-    Student(String name, int grade) {
+    public Student(int id, int gpa, String name, String group) {
+        this.id = id;
+        this.gpa = gpa;
         this.name = name;
-        this.grade = grade;
-        ID = 0;
+        this.group = group;
     }
 
-    public int getID() {
-        return ID;
+    public int getId() {
+        return id;
     }
 
-    int getGrade() {
-        return grade;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    String getName() {
+    public int getGpa() {
+        return gpa;
+    }
+
+    public void setGpa(int gpa) {
+        this.gpa = gpa;
+    }
+
+    public String getName() {
         return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getGroup() {
+        return group;
+    }
+
+    public void setGroup(String group) {
+        this.group = group;
     }
 
     @Override
     public String toString() {
-        return "Студент{" +
-                "ID=" + ID +
-                ", name='" + name + '\'' +
-                ", grade=" + grade +
+        return "{" +
+                "gpa=" + gpa +
+                ", " + name +
                 '}';
     }
 }

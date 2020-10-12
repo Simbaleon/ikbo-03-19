@@ -1,0 +1,2 @@
+Student {name='катя', grade=2}
+Student {name='полина', grade=5}
